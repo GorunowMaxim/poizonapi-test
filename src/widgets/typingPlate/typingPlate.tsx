@@ -42,6 +42,12 @@ const TypingPlate = () => {
 
 	const currentString = text[stringIndex];
 
+	const countWpm = () => {
+		if (currentString[typedText.length] === ' ' || currentString[typedText.length] === null) {
+			incrementWpm();
+		}
+	};
+
 	const handleKeyDown = useCallback(
 		(e: KeyboardEvent) => {
 			if (isPaused) return;
@@ -54,9 +60,7 @@ const TypingPlate = () => {
 			const currentKey = currentString[typedText.length - 1];
 			if (e.key === currentKey) {
 				updateCorrectTypedText(e.key);
-				if (currentString[typedText.length] === ' ' || currentString[typedText.length] === null) {
-					incrementWpm();
-				}
+				countWpm();
 			} else {
 				updateWrongTypedText(e.key);
 			}
