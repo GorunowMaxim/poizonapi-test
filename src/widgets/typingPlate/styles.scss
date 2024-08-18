@@ -1,0 +1,42 @@
+.typing-plate {
+
+    &__text {
+        font-size: 35px;
+        color: rgba(83, 83, 83, 0.459);
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+.word {
+    display: block;
+    margin: 0 10px;
+}
+
+.letter {
+    display: inline;
+
+    &_correct {
+        color: rgb(102, 187, 102);
+    }
+
+    &_wrong {
+        color: rgb(204, 102, 102);
+    }
+}
+
+.result-panel {
+    font-size: 35px;
+    color: rgba(83, 83, 83, 0.459);
+}
+
+@media (max-width: 650px) {
+    .typing-plate {
+        &__text {
+            font-size: 25px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.time-limits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.time-limit {
+    font-size: 25px;
+    color: rgba(83, 83, 83, 0.459);
+    background-color: transparent;
+
+    &:hover {
+        color: rgb(83, 83, 83);
+    }
+
+    &_active {
+        color: rgb(83, 83, 83);
+    }
+}
+
+@media (max-width: 650px) {
+    .time-limits {
+        gap: 20px;
+    }
+
+    .time-limit{
+        font-size: 20px;
+    }
+}

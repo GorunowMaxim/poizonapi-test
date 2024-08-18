@@ -1,0 +1,18 @@
+.control-panel {
+    width: auto;
+    padding: 0 20px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: rgb(143, 143, 143);
+    border-radius: 15px;
+}
+
+@media (max-width: 650px) {
+    .control-panel {
+        padding: 0 10px;
+        gap: 20px;
+    }
+}
